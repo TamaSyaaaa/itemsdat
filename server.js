@@ -21,7 +21,7 @@ app.get('/items.dat', (req, res) => {
     // Karena kita menonaktifkan random suffix saat upload, nama filenya akan selalu statis.
     // Ganti 'YOUR_STORE_ID' nanti dengan ID dari URL Vercel Blob milikmu
     // Contoh URL: https://xyz123.public.blob.vercel-storage.com/items.dat
-    const blobUrl = `https://${process.env.VERCEL_BLOB_STORE_ID}.public.blob.vercel-storage.com/items.dat`;
+    const blobUrl = `https://${process.env.BLOB_STORE_ID}.public.blob.vercel-storage.com/items.dat`;
     
     // Alihkan client (bot/game) langsung ke link cloud Vercel Blob
     res.redirect(blobUrl);
